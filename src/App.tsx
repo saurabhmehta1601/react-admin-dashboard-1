@@ -1,9 +1,10 @@
 import { ThemeProvider } from "@emotion/react"
 import { ColorModeContext, useMode } from "./theme"
-import { CssBaseline } from "@mui/material"
+import { Box, CssBaseline } from "@mui/material"
 import Topbar from "./scenes/global/Topbar"
 import { Route, Routes } from "react-router-dom"
 import Dashboard from "./scenes/dashboard"
+import Sidebar from "./scenes/global/Sidebar"
 
 function App() {
   const [theme, colorMode] = useMode()
@@ -12,14 +13,15 @@ function App() {
     <ColorModeContext.Provider value={colorMode as any} >
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className="app">
-          <main className="content">
+        <Box display="flex" width="100%">
+          <Sidebar />
+          <Box className="content" flex={1}>
             <Topbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
             </Routes>
-          </main>
-        </div>
+          </Box>
+        </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>
   )
