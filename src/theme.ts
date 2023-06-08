@@ -196,7 +196,7 @@ export const themeSettings = (mode: themeType) => {
 };
 
 // context for color mode
-export const ColorModeContext = createContext({
+export const ColorModeContext = createContext<{ toggleColorMode: () => void }>({
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   toggleColorMode: () => {},
 });
@@ -215,5 +215,3 @@ export const useMode = () => {
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return [theme, colorMode];
 };
-
-
