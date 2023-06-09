@@ -17,9 +17,9 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext)
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box display="flex" justifyContent="space-between">
       {/* SEARCH BAR */}
-      <Box display="flex" p={1} alignItems="center" borderRadius={"3px"} sx={{ backgroundColor: colors.primary[400] }}>
+      <Box display="flex" px={2} alignItems="center" borderRadius={"3px"} sx={{ backgroundColor: colors.primary[400] }}>
         <InputBase sx={{ flex: 1 }} placeholder='Search' />
         <SearchOutlinedIcon />
       </Box>

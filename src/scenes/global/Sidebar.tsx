@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 interface IMenuItem {
   title: string,
   href: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Icon: any
 }
 
@@ -32,7 +33,7 @@ interface IMenuCategory {
 const dashboardItem: IMenuItem = {
   title: "Dashboard",
   Icon: HomeOutlinedIcon,
-  href: "/dashboard"
+  href: "/"
 }
 
 const menuCategories: IMenuCategory[] = [
@@ -42,7 +43,7 @@ const menuCategories: IMenuCategory[] = [
       {
         title: "Manage Teams",
         Icon: GroupOutlined,
-        href: "/teams"
+        href: "/team"
       },
       {
         title: "Contacts Information",
@@ -62,7 +63,7 @@ const menuCategories: IMenuCategory[] = [
       {
         title: "Profile Form",
         Icon: Person2OutlinedIcon,
-        href: "/profile"
+        href: "/form"
       },
       {
         title: "Calendar",
@@ -155,7 +156,7 @@ const Sidebar = () => {
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
-        <Box sx={{ padding: isCollapsed ? undefined : "10%" }}>
+        <Box sx={{ padding: isCollapsed ? undefined : "4%" }}>
           <Box display="flex" alignItems="center" justifyContent="space-around">
             {!isCollapsed && <Typography variant="h3">
               RXADMIN
@@ -175,7 +176,7 @@ const Sidebar = () => {
           {
             !isCollapsed && <Box textAlign={"center"} m={1}>
               <Typography variant="h2" fontWeight={700} color="#fff" >Saurabh</Typography>
-              <Typography variant="h6" color={colors.greenAccent[500]}>Web Developer</Typography>
+              <Typography variant="h5" color={colors.greenAccent[500]}>Web Developer</Typography>
             </Box>
           }
 
