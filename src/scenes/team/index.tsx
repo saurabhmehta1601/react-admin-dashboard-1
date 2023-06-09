@@ -1,4 +1,4 @@
-import { Box, Typography, colors } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Header from "../../components/Header"
 import { DataGrid } from '@mui/x-data-grid';
 import { mockDataTeam } from "../../data/mockData";
@@ -42,7 +42,7 @@ const Team = () => {
     <div>
       <Header heading="Team" subHeading="Managing the Team Members" />
       <Box
-        height={"400px"}
+        height={"500px"}
         mb={2}
         pb={2}
         sx={{
