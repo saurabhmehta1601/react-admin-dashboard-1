@@ -23,9 +23,9 @@ function App() {
     <ColorModeContext.Provider value={colorMode as any} >
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box display="flex" width="100%" height="100vh">
+        <Box display="flex" width="100%" height="100vh" sx={{ overflowX: "hidden", overflowY: "scroll" }}>
           <Sidebar />
-          <Box className="content" flex={1} p={2}>
+          <Box className="content" flex={1} p={2} sx={{ overflowY: "hidden" }}>
             <Topbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />

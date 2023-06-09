@@ -1,6 +1,6 @@
 import Header from '../../components/Header'
 
-const FAQ = () => {
+const Faq = () => {
   return (
     <div>
       <Header heading='FAQ' subHeading='Frequently Asked Questions Page' />
@@ -8,4 +8,4 @@ const FAQ = () => {
   )
 }
 
-export default FAQ
+export default Faq
