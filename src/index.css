@@ -24,6 +24,6 @@
 }
 
 /* Scrollbar Handle on Hover */
-/* ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-} */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #535ac8;
+}
