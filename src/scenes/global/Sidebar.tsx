@@ -1,6 +1,7 @@
-import { Box, Typography, useTheme } from "@mui/material"
+import { Box, IconButton, Typography, useTheme } from "@mui/material"
 import { tokens } from "../../theme"
 import { useState } from "react"
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined"
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import GroupOutlined from '@mui/icons-material/GroupOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
@@ -107,6 +108,7 @@ interface ItemProps {
   isActive: boolean,
   item: IMenuItem
 }
+
 const Item = ({ isActive, item, onClick }: ItemProps) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -118,9 +120,8 @@ const Item = ({ isActive, item, onClick }: ItemProps) => {
       onClick={onClick}
       style={{ color: colors.grey[100] }}
     >
-      <Link to={item.href}>
-        <Typography>{item.title}</Typography>
-      </Link>
+      <Typography sx={{ position: "relative", bottom: -1 }}>{item.title}</Typography>
+      <Link to={item.href} />
     </MenuItem>
   )
 }
@@ -154,29 +155,68 @@ const Sidebar = () => {
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
-        <Menu iconShape="square">
-          <Item
-            onClick={() => setSelectedItem(dashboardItem)}
-            isActive={selectedItem.title === dashboardItem.title}
-            item={dashboardItem} />
-          {menuCategories.map((category: IMenuCategory) => (
-            <Box>
-              <Typography>
-                {category.name}
-              </Typography>
-              {category.items.map((item: IMenuItem) => (
-                <Item
-                  onClick={() => setSelectedItem(item)}
-                  isActive={selectedItem.title === item.title}
-                  item={item}
-                />
-              ))}
+        <Box sx={{ padding: isCollapsed ? undefined : "10%" }}>
+          <Box display="flex" alignItems="center" justifyContent="space-around">
+            {!isCollapsed && <Typography variant="h3">
+              RXADMIN
+            </Typography>}
+            <IconButton
+              onClick={() => setIsCollapsed(prev => !prev)}
+              sx={{ marginTop: isCollapsed ? 1 : 0 }}
+            >
+              <MenuOutlinedIcon />
+            </IconButton>
+          </Box>
+          {
+            !isCollapsed && <Box textAlign={"center"} mt={2}>
+              <img src="/my-profile.png" alt="saurabh" width={105} height={105} />
             </Box>
-          ))
           }
-        </Menu>
-      </ProSidebar>
-    </Box>
+          {
+            !isCollapsed && <Box textAlign={"center"} m={1}>
+              <Typography variant="h2" fontWeight={700} color="#fff" >Saurabh</Typography>
+              <Typography variant="h6" color={colors.greenAccent[500]}>Web Developer</Typography>
+            </Box>
+          }
+
+          <Menu iconShape="square">
+            <Box
+              sx={{ ...(isCollapsed ? { position: "relative", left: -4 } : {}) }}>
+              <Item
+                onClick={() => setSelectedItem(dashboardItem)}
+                isActive={selectedItem.title === dashboardItem.title}
+                item={dashboardItem}
+              />
+            </Box>
+
+            {menuCategories.map((category: IMenuCategory) => (
+              <Box>
+                <Typography
+                  variant="h6"
+                  color={colors.grey[300]}
+                  ml={!isCollapsed ? 2 : 0}
+                  textAlign={isCollapsed ? "center" : "left"}
+                >
+                  {category.name}
+                </Typography>
+                {
+                  category.items.map((item: IMenuItem) => (
+                    <Box key={item.title} sx={{ ...(isCollapsed ? { position: "relative", left: -4 } : {}) }}>
+                      <Item
+                        onClick={() => setSelectedItem(item)}
+                        isActive={selectedItem.title === item.title}
+                        item={item}
+                      />
+                    </Box>
+                  ))
+                }
+              </Box>
+            ))
+            }
+          </Menu>
+        </Box>
+      </ProSidebar >
+    </Box >
   )
 }
 

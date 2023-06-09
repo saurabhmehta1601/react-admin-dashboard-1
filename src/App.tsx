@@ -13,7 +13,7 @@ function App() {
     <ColorModeContext.Provider value={colorMode as any} >
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box display="flex" width="100%">
+        <Box display="flex" width="100%" height="100vh">
           <Sidebar />
           <Box className="content" flex={1}>
             <Topbar />
