@@ -61,7 +61,7 @@ const Team = () => {
               { field: 'id', headerName: 'ID', width: 70 },
               { field: 'name', headerName: 'Name', flex: 1 },
               { field: 'age', headerName: 'Age', width: 70 },
-              { field: 'phone', headerName: "Phone", flex: 1 },
+              { field: 'phone', headerName: "Phone", width: 140 },
               { field: 'email', headerName: 'Email', flex: 1 },
               {
                 field: 'accessLevel',
