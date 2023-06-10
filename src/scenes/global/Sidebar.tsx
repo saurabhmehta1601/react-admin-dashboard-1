@@ -191,7 +191,7 @@ const Sidebar = () => {
             </Box>
 
             {menuCategories.map((category: IMenuCategory) => (
-              <Box>
+              <Box key={category.name}>
                 <Typography
                   variant="h6"
                   color={colors.grey[300]}
