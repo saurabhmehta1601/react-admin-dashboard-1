@@ -140,7 +140,7 @@ const BarChart = () => {
     ]}
     role="application"
     isFocusable={true}
-    ariaLabel="Nivo bar chart demo"
+    ariaLabel="Nivo bar chart"
     barAriaLabel={e => e.id + ": " + e.formattedValue + " in country: " + e.indexValue}
   />
 
