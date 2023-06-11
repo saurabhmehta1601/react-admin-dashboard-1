@@ -4,11 +4,11 @@ import { mockGeographyData } from '../data/mockData'
 import { useTheme } from '@mui/material'
 import { tokens } from '../theme'
 
-const ChoroplethChart = () => {
+const ChoroplethChart = ({ compact = false }) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
 
-  return < ResponsiveChoropleth
+  return <ResponsiveChoropleth
     data={mockGeographyData}
     theme={{
       axis: {
@@ -65,31 +65,32 @@ const ChoroplethChart = () => {
     borderColor="#152538"
 
     legends={
-      [
-        {
-          anchor: 'bottom-left',
-          direction: 'column',
-          justify: true,
-          translateX: 20,
-          translateY: -100,
-          itemsSpacing: 0,
-          itemWidth: 94,
-          itemHeight: 18,
-          itemDirection: 'left-to-right',
-          itemTextColor: colors.grey[100],
-          itemOpacity: 0.85,
-          symbolSize: 18,
-          effects: [
-            {
-              on: 'hover',
-              style: {
-                itemTextColor: colors.grey[600],
-                itemOpacity: 1
+      compact ? undefined :
+        [
+          {
+            anchor: 'bottom-left',
+            direction: 'column',
+            justify: true,
+            translateX: 20,
+            translateY: -100,
+            itemsSpacing: 0,
+            itemWidth: 94,
+            itemHeight: 18,
+            itemDirection: 'left-to-right',
+            itemTextColor: colors.grey[100],
+            itemOpacity: 0.85,
+            symbolSize: 18,
+            effects: [
+              {
+                on: 'hover',
+                style: {
+                  itemTextColor: colors.grey[600],
+                  itemOpacity: 1
+                }
               }
-            }
-          ]
-        }
-      ]}
+            ]
+          }
+        ]}
   />
 }
 

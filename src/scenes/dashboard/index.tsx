@@ -10,6 +10,7 @@ import RevenueGenerated from '../../components/RevenueGenerated';
 import { useMediaQuery, useTheme } from '@mui/material';
 import CampaignCard from '../../components/CampaignCard';
 import SalesQuantityCard from '../../components/SalesQuantityCard';
+import GeographyBasedTrafficCard from '../../components/GeographyBasedTrafficCard';
 
 const Dashboard = () => {
   const theme = useTheme()
@@ -68,7 +69,7 @@ const Dashboard = () => {
       <Box display={"flex"} flexWrap={"wrap"} mt={2} rowGap={1} columnGap={1}>
         <Box flex={1}> <CampaignCard /> </Box>
         <Box flex={1}> <SalesQuantityCard /> </Box>
-        <Box flex={1}> <CampaignCard /> </Box>
+        <Box flex={1}> <GeographyBasedTrafficCard /> </Box>
       </Box>
     </Box>
   )

@@ -1,8 +1,9 @@
 import { Box, Paper, Typography, useTheme } from "@mui/material"
 import { tokens } from "../theme"
 import BarChart from "./BarChart"
+import ChoroplethChart from "./ChoroplethChart"
 
-const SalesQuantityCard = () => {
+const GeographyBasedTrafficCard = () => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
   return (
@@ -15,13 +16,16 @@ const SalesQuantityCard = () => {
     >
       <Typography variant="h5" fontWeight={700}>Sales Quantity</Typography>
       <Box
+        mt={2}
         width={"100%"}
         height={"220px"}
+        borderRadius={1}
+        border={`2px solid ${colors.primary[100]}`}
       >
-        <BarChart compact={true} />
+        <ChoroplethChart compact={true} />
       </Box>
     </Paper >
   )
 }
 
-export default SalesQuantityCard
+export default GeographyBasedTrafficCard
