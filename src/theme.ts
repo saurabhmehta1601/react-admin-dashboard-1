@@ -5,8 +5,8 @@ type themeType = "light" | "dark";
 
 // color design tokens export
 export const tokens = (mode: themeType) => ({
-  white: "#eee",
-  black: "#333",
+  white: "#fff",
+  black: "#000",
   ...(mode === "dark"
     ? {
         grey: {
