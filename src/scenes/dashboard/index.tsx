@@ -15,6 +15,7 @@ const Dashboard = () => {
         <Header heading="DASHBOARD" subHeading="Welcome to Dashboard" />
         <DownloadReports />
       </Box>
+      
     </Box>
   )
 }

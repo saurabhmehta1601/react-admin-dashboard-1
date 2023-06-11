@@ -158,7 +158,7 @@ const Sidebar = () => {
       <ProSidebar collapsed={isCollapsed}>
         <Box sx={{ padding: isCollapsed ? undefined : "4%" }}>
           <Box display="flex" alignItems="center" justifyContent="space-around">
-            {!isCollapsed && <Typography variant="h3">
+            {!isCollapsed && <Typography variant="h3" color={colors.primary[100]}>
               RXADMIN
             </Typography>}
             <IconButton
@@ -175,7 +175,7 @@ const Sidebar = () => {
           }
           {
             !isCollapsed && <Box textAlign={"center"} m={1}>
-              <Typography variant="h2" fontWeight={700} color="#fff" >Saurabh</Typography>
+              <Typography variant="h2" fontWeight={700} color={colors.primary[100]} >Saurabh</Typography>
               <Typography variant="h5" color={colors.greenAccent[500]}>Web Developer</Typography>
             </Box>
           }

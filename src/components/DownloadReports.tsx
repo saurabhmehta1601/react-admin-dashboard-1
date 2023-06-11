@@ -8,20 +8,20 @@ const DownloadReports = () => {
   const colors = tokens(theme.palette.mode)
   return (
     <Box
-      px={3}
-      py={2}
+      px={2}
+      py={1}
       borderRadius={1}
       display={"flex"}
       columnGap={1}
       sx={{
         bgcolor: colors.blueAccent[600], cursor: "pointer",
         "&:hover": {
-          bgcolor: colors.blueAccent[700]
+          bgcolor: theme.palette.mode === "dark" ? colors.blueAccent[700] : colors.blueAccent[400]
         }
       }}
     >
-      <DownloadIcon sx={{ color: colors.grey[100] }} />
-      <Typography fontWeight={700}>
+      <DownloadIcon sx={{ color: colors.white }} />
+      <Typography fontWeight={700} color={colors.white}>
         Download Reports
       </Typography>
     </Box>
