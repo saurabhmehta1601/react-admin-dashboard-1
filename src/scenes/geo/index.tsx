@@ -10,7 +10,9 @@ const Geo = () => {
 
   return (
     <Box>
-      <Header heading='GEO' subHeading='Simple Geography Chart' />
+      <Box mt={5} mb={3}>
+        <Header heading='GEO' subHeading='Simple Geography Chart' />
+      </Box>
       <Box width="100%" height={"500px"}
         border={`1px solid ${colors.grey[100]}`}
         borderRadius={"4px"}

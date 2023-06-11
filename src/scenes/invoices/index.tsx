@@ -10,8 +10,10 @@ const Invoices = () => {
   const colors = tokens(theme.palette.mode)
 
   return (
-    <div>
-      <Header heading="Invoices" subHeading="List of invoice balances" />
+    <Box>
+      <Box mt={5} mb={3}>
+        <Header heading="Invoices" subHeading="List of invoice balances" />
+      </Box>
       <Box
         height={"500px"}
         mb={2}
@@ -71,7 +73,7 @@ const Invoices = () => {
           }}
         />
       </Box>
-    </div>
+    </Box>
   )
 }
 

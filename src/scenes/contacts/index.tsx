@@ -11,7 +11,9 @@ const Team = () => {
 
   return (
     <div>
-      <Header heading="Team" subHeading="Managing the Team Members" />
+      <Box mt={5} mb={3}>
+        <Header heading="Contacts" subHeading="See the list of your contacts" />
+      </Box>
       <Box
         height={"500px"}
         mb={2}

@@ -3,7 +3,7 @@ import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import { Typography, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../theme'
 
 const Faq = () => {
@@ -11,9 +11,10 @@ const Faq = () => {
   const colors = tokens(theme.palette.mode)
 
   return (
-    <div>
-      <Header heading='FAQ' subHeading='Frequently Asked Questions Page' />
-
+    <Box>
+      <Box mt={5} mb={3}>
+        <Header heading='FAQ' subHeading='Frequently Asked Questions Page' />
+      </Box>
       {mockDataFaqs.map((faq, idx) => (
         <Accordion key={idx} disableGutters sx={{ bgcolor: colors.blueAccent[900] }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -26,7 +27,7 @@ const Faq = () => {
           </AccordionDetails>
         </Accordion>))}
 
-    </div>
+    </Box>
   )
 }
 

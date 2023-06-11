@@ -3,6 +3,7 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from "@fullcalendar/interaction"
 import { useState } from 'react'
+import Box from '@mui/material/Box'
 
 const Calendar = () => {
   const [events, setEvents] = useState<{ title: string, date: string }[]>([])
@@ -15,15 +16,18 @@ const Calendar = () => {
   }
 
   return (
-    <div>
-      <Header heading='CALENDAR' subHeading='Full Calendar Interactive Page' />
+    <Box>
+      <Box mt={5} mb={3}>
+        <Header heading='CALENDAR' subHeading='Full Calendar Interactive Page' />
+      </Box>
+
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         dateClick={handleClick}
         events={events}
       />
-    </div>
+    </Box>
   )
 }
 

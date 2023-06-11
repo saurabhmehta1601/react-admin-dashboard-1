@@ -16,7 +16,9 @@ const Form = () => {
 
   return (
     <Box>
-      <Header heading='CREATE USER' subHeading='Create a new user profile' />
+      <Box mt={5} mb={3}>
+        <Header heading='CREATE USER' subHeading='Create a new user profile' />
+      </Box>
 
       <Formik
         initialValues={initialValues}
