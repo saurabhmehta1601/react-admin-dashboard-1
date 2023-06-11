@@ -1,10 +1,15 @@
 import Header from '../../components/Header'
+import Box from '@mui/material/Box'
+import PieChart from '../../components/PieChart'
 
 const Pie = () => {
   return (
-    <div>
-      <Header heading='PIE' subHeading='Simple Pie Chart' />
-    </div>
+    <Box>
+      <Header heading='PIE Chart' subHeading='Simple Pie Chart' />
+      <Box height={"500px"} width={"100%"}>
+        <PieChart />
+      </Box>
+    </Box>
   )
 }
 
