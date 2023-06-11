@@ -23,6 +23,11 @@ const LineChart = () => {
           container: {
             color: theme.palette.mode === "light" ? colors.grey[100] : colors.grey[900]
           }
+        },
+        legends: {
+          text:{
+            fill: colors.primary[100],
+          }
         }
       }}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
@@ -41,7 +46,6 @@ const LineChart = () => {
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,
-        tickRotation: 45,
         legend: 'transportation',
         legendOffset: 36,
         legendPosition: 'middle'
