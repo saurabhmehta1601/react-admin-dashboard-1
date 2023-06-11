@@ -16,9 +16,10 @@ const StatsCard = ({ Icon, value, name, percentage }: IProps) => {
   return (
     <Paper sx={{
       p: 4,
+      height: "100%",
       bgcolor: theme.palette.mode === "dark" ? colors.blueAccent[900] : colors.white
     }}>
-      <Box display={"flex"} justifyContent={"space-between"}>
+      <Box display={"flex"} columnGap={4} justifyContent={"space-between"}>
         <Box>
           <Icon size="large" fontSize="large" sx={{ color: colors.greenAccent[500] }} />
           <Typography fontWeight={700} variant="h5" mt={1}>{value}</Typography>

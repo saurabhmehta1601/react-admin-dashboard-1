@@ -3,7 +3,7 @@ import { mockLineData } from '../data/mockData'
 import { useTheme } from "@mui/material"
 import { tokens } from '../theme'
 
-const LineChart = () => {
+const LineChart = ({ compact = false }) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
 
@@ -61,7 +61,7 @@ const LineChart = () => {
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,
-        legend: 'transportation',
+        legend: compact? undefined: 'transportation',
         legendOffset: 36,
         legendPosition: 'middle'
       }}
@@ -69,13 +69,13 @@ const LineChart = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'count',
+        legend: compact ? undefined : 'count',
         legendOffset: -40,
         legendPosition: 'middle'
       }}
       enableGridX={false}
       enableGridY={false}
-      enablePoints={false}
+      enablePoints={compact}
       pointSize={10}
       pointColor={{ theme: 'background' }}
       pointBorderWidth={2}
