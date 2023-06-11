@@ -10,19 +10,39 @@ const MyResponsivePie = () => {
   return <ResponsivePie
     data={mockPieData}
     theme={{
+      // added
       axis: {
-        ticks: {
+        domain: {
+          line: {
+            stroke: colors.grey[100],
+          },
+        },
+        legend: {
           text: {
-            fill: colors.primary[100],
+            fill: colors.grey[100],
+          },
+        },
+        ticks: {
+          line: {
+            stroke: colors.grey[100],
+            strokeWidth: 1,
+          },
+          text: {
+            fill: colors.grey[100],
             fontWeight: 700
-          }
-        }
+          },
+        },
+      },
+      legends: {
+        text: {
+          fill: colors.grey[100],
+        },
       },
       tooltip: {
         container: {
-          color: theme.palette.mode === "light" ? colors.grey[100] : colors.grey[900]
+          color: theme.palette.mode === "dark" ? colors.grey[900] : colors.grey[100],
         }
-      }
+      },
     }}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
     valueFormat=" >-"
