@@ -16,9 +16,13 @@ const Faq = () => {
         <Header heading='FAQ' subHeading='Frequently Asked Questions Page' />
       </Box>
       {mockDataFaqs.map((faq, idx) => (
-        <Accordion key={idx} disableGutters sx={{ bgcolor: colors.blueAccent[900] }}>
+        <Accordion key={idx}
+          sx={{
+            bgcolor: colors.primary[400]
+          }}
+        >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography variant='h4' color={colors.greenAccent[300]}>
+            <Typography variant='h4' color={colors.blueAccent[200]}>
               {faq.question}
             </Typography>
           </AccordionSummary>

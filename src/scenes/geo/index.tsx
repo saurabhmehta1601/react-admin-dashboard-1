@@ -13,9 +13,12 @@ const Geo = () => {
       <Box mt={5} mb={3}>
         <Header heading='GEO' subHeading='Simple Geography Chart' />
       </Box>
-      <Box width="100%" height={"500px"}
+      <Box
+        width="100%"
+        height={"500px"}
         border={`1px solid ${colors.grey[100]}`}
         borderRadius={"4px"}
+        sx={{ bgcolor: theme.palette.mode === 'dark' ? undefined : colors.grey[900] }}
       >
         <ChoroplethChart />
       </Box>
