@@ -61,6 +61,7 @@ const LineChart = ({ compact = false }) => {
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,
+        tickRotation: compact? 45: undefined,
         legend: compact? undefined: 'transportation',
         legendOffset: 36,
         legendPosition: 'middle'
