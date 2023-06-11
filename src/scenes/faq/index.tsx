@@ -50,4 +50,8 @@ const mockDataFaqs = [
     question: "What technologies are used to build this website?",
     answer: "Well I have used React, Typescript, Material UI, Material UI Grid X, Nivo Charts ( which are built on top of D3 ), React Pro Sidebar, Formik and Yup for form validation, React Router Dom, React Full Calendar, React Custom Scrollbars and many more."
   },
+  {
+    question: "How can I contact you I want to get in touch with you?",
+    answer: "Feel free 😄 to reach me via email at saurabhmehta1601@gmail.com"
+  }
 ]
