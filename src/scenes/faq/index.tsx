@@ -18,7 +18,7 @@ const Faq = () => {
       {mockDataFaqs.map((faq, idx) => (
         <Accordion key={idx}
           sx={{
-            bgcolor: colors.primary[400]
+            bgcolor: theme.palette.mode === "dark" ? colors.blueAccent[900] : colors.white
           }}
         >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
