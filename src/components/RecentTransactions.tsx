@@ -25,7 +25,7 @@ const Transaction = ({ id, user, date, cost }: IProps) => {
       bgcolor={colors.greenAccent[600]} borderRadius={1}
       color={colors.primary[100]}
     >
-      {cost}
+      ${cost}
     </Box>
   </Box>
 }

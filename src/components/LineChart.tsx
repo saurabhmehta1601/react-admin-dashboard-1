@@ -61,8 +61,8 @@ const LineChart = ({ compact = false }) => {
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,
-        tickRotation: compact? 25: undefined,
-        legend: compact? undefined: 'transportation',
+        tickRotation: compact ? 25 : undefined,
+        legend: compact ? undefined : 'transportation',
         legendOffset: 36,
         legendPosition: 'middle'
       }}
@@ -84,7 +84,7 @@ const LineChart = ({ compact = false }) => {
       pointLabelYOffset={-12}
       enableCrosshair={false}
       useMesh={true}
-      legends={[
+      legends={compact ? undefined : [
         {
           anchor: 'bottom-right',
           direction: 'column',
