@@ -169,7 +169,7 @@ const Sidebar = () => {
             </IconButton>
           </Box>
           {
-            !isCollapsed && <Box textAlign={"center"} mt={2}>
+            !isCollapsed && <Box textAlign={"center"} mt={4}>
               <img src="/my-profile.png" alt="saurabh" width={105} height={105} />
             </Box>
           }

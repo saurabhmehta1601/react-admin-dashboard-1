@@ -1,6 +1,5 @@
 import { Box, Paper, Typography, useTheme } from "@mui/material"
 import { tokens } from "../theme"
-import BarChart from "./BarChart"
 import ChoroplethChart from "./ChoroplethChart"
 
 const GeographyBasedTrafficCard = () => {
@@ -14,7 +13,7 @@ const GeographyBasedTrafficCard = () => {
         bgcolor: theme.palette.mode === "dark" ? colors.blueAccent[900] : colors.white
       }}
     >
-      <Typography variant="h5" fontWeight={700}>Sales Quantity</Typography>
+      <Typography variant="h5" fontWeight={700}>Geography Based Traffic</Typography>
       <Box
         mt={2}
         width={"100%"}
