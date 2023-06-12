@@ -12,12 +12,12 @@ const RevenueGenerated = () => {
   return (
     <Paper sx={{
       p: 4,
-      width: "100%",
+      height:"100%",
       bgcolor: theme.palette.mode === "dark" ? colors.blueAccent[900] : colors.white
     }}>
       <Box display={"flex"} justifyContent={"space-between"} mb={2}>
         <Box>
-          <Typography> Revenue Generated </Typography>
+          <Typography fontWeight={700}> Revenue Generated </Typography>
           <Typography
             variant="h4"
             color={colors.greenAccent[500]}
@@ -32,7 +32,7 @@ const RevenueGenerated = () => {
           </IconButton>
         </Box>
       </Box>
-      <Box height={"250px"}>
+      <Box height={"85%"}>
         <LineChart compact={true} />
       </Box>
     </Paper>

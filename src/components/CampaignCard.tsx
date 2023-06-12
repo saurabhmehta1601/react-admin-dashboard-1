@@ -17,7 +17,10 @@ const CampaignCard = () => {
         display={"flex"} justifyContent={"center"} alignItems={"center"}>
         <Box position={"relative"}>
           <CircularProgress variant="determinate" thickness={8} size={120} value={100}
-            sx={{ position: "absolute" }} />
+            sx={{
+              position: "absolute",
+              color: colors.primary[500]
+            }} />
           <CircularProgress variant="determinate" thickness={8} size={120} value={50}
             sx={{ color: colors.greenAccent[500] }} />
         </Box>

@@ -11,6 +11,7 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import CampaignCard from '../../components/CampaignCard';
 import SalesQuantityCard from '../../components/SalesQuantityCard';
 import GeographyBasedTrafficCard from '../../components/GeographyBasedTrafficCard';
+import RecentTransactions from '../../components/RecentTransactions';
 
 const Dashboard = () => {
   const theme = useTheme()
@@ -57,15 +58,17 @@ const Dashboard = () => {
       {/* ROW 2 */}
       <Box
         display={"flex"}
+        height={"66vh"}
         flexWrap={isDesktop ? undefined : "wrap"}
         mt={2}
         columnGap={1}
-        rowGap={1}>
+        rowGap={1}
+      >
         <Box flex={2}> <RevenueGenerated /> </Box>
-        <Box flex={1}> <RevenueGenerated /> </Box>
+        <Box flex={1}> <RecentTransactions /> </Box>
       </Box>
-      {/* Row 3 */}
 
+      {/* Row 3 */}
       <Box display={"flex"} flexWrap={"wrap"} mt={2} rowGap={1} columnGap={1}>
         <Box flex={1}> <CampaignCard /> </Box>
         <Box flex={1}> <SalesQuantityCard /> </Box>
