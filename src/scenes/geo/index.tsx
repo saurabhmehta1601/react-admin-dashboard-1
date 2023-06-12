@@ -15,7 +15,7 @@ const Geo = () => {
       </Box>
       <Paper
         sx={{
-          border: `1px solid ${colors.grey[100]}`,
+          border: `1.5px solid ${colors.grey[100]}`,
           height: "500px",
           bgcolor: theme.palette.mode === "dark" ? colors.blueAccent[900] : colors.white
         }}
