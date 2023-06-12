@@ -53,8 +53,8 @@ const Invoices = () => {
             "& .MuiDataGrid-cell": {
               borderBottom: "none",
             },
-            "& .name-column--cell": {
-              color: colors.greenAccent[300],
+            "& .MuiDataGrid-row": {
+              bgcolor: theme.palette.mode === "dark" ? colors.grey[800] : colors.white,
             },
             "& .MuiDataGrid-columnHeaders": {
               backgroundColor: colors.blueAccent[700],

@@ -18,11 +18,6 @@ const Team = () => {
         height={"500px"}
         mb={2}
         pb={2}
-        sx={{
-          "MuiDataGrid-columnHeaders": {
-            bgcolor: "red !important"
-          }
-        }}
       >
         <DataGrid
           scrollbarSize={0}
@@ -48,8 +43,8 @@ const Team = () => {
             "& .MuiDataGrid-cell": {
               borderBottom: "none",
             },
-            "& .name-column--cell": {
-              color: colors.greenAccent[300],
+            "& .MuiDataGrid-row": {
+              bgcolor: theme.palette.mode === "dark" ? colors.grey[800] : colors.white,
             },
             "& .MuiDataGrid-columnHeaders": {
               backgroundColor: colors.blueAccent[700],
