@@ -11,7 +11,7 @@ const Header = ({ heading, subHeading }: IProps) => {
   const colors = tokens(theme.palette.mode)
   return (
     <Box>
-      <Typography variant="h2" fontWeight={700}>{heading.toUpperCase()}</Typography>
+      <Typography variant="h2" fontWeight={900}>{heading.toUpperCase()}</Typography>
       <Typography variant="h6" color={colors.greenAccent[400]}>{subHeading}</Typography>
     </Box>
   )
