@@ -27,10 +27,11 @@ const Form = () => {
       >
         {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            <Paper sx={{ minHeight: "50vh", bgcolor: colors.primary[600], p: 2 }}>
-
+            <Paper sx={{
+              minHeight: "50vh", px: 4, py: 8,
+              bgcolor: theme.palette.mode === "dark" ? colors.blueAccent[900] : colors.white
+            }} >
               <Box display={"flex"} flexDirection={"column"} rowGap={2}>
-
                 <Box display={"flex"} width={"100%"} columnGap={8}>
                   <TextField
                     name='firstName'
@@ -95,7 +96,11 @@ const Form = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                 />
-                <Button type='submit' variant='contained' sx={{ bgcolor: colors.blueAccent[600] }}>
+                <Button
+                  type='submit'
+                  variant='contained'
+                  sx={{ bgcolor: colors.blueAccent[600], mt: 2 }}
+                >
                   Add User
                 </Button>
               </Box>
