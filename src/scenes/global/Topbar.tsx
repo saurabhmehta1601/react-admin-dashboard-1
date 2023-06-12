@@ -21,12 +21,13 @@ const Topbar = () => {
       {/* SEARCH BAR */}
       <Box
         display="flex"
+        border={`1.5px solid ${colors.primary[900]}`}
         px={2} alignItems="center"
         borderRadius={"4px"}
-        sx={{ bgcolor: colors.primary[400] }}
+        sx={{ bgcolor: colors.white }}
       >
-        <InputBase sx={{ flex: 1 }} placeholder='Search' />
-        <SearchOutlinedIcon />
+        <InputBase sx={{ flex: 1, color: colors.black }} placeholder='Search' />
+        <SearchOutlinedIcon sx={{ color: colors.black }} />
       </Box>
       <Box display="flex" alignItems="center">
         <IconButton onClick={() => colorMode.toggleColorMode()}>

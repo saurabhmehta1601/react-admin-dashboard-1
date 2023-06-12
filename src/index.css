@@ -1,4 +1,6 @@
-
+body .light-mode {
+  background-color: #f2f0f0;
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar {

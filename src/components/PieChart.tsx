@@ -61,7 +61,7 @@ const MyResponsivePie = () => {
       ]
     }}
     arcLinkLabelsSkipAngle={10}
-    arcLinkLabelsTextColor="#333333"
+    arcLinkLabelsTextColor={colors.primary[100]}
     arcLinkLabelsThickness={2}
     arcLinkLabelsColor={{ from: 'color' }}
     arcLabelsSkipAngle={10}
@@ -121,7 +121,7 @@ const MyResponsivePie = () => {
       },
       {
         match: {
-          id: 'scala'
+          id: 'scala',
         },
         id: 'lines'
       },
@@ -163,7 +163,7 @@ const MyResponsivePie = () => {
           {
             on: 'hover',
             style: {
-              itemTextColor: '#000'
+              itemTextColor: colors.grey[100]
             }
           }
         ]
