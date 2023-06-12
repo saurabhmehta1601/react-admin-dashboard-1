@@ -18,12 +18,16 @@ import Geo from "./scenes/geo"
 
 function App() {
   const [theme, colorMode] = useMode()
+
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <ColorModeContext.Provider value={colorMode as any} >
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box display="flex" width="100%" height="100vh" >
+        <Box display="flex" width="100%" height="100vh"
+          // @ts-expect-error theme type
+          className={(theme).palette.mode === "dark" ? "dark-mode" : "light-mode"}
+        >
           <Sidebar />
           <Box className="content" flex={1} p={2} sx={{ overflowY: 'scroll' }}>
             <Topbar />
